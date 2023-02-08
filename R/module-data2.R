@@ -40,6 +40,14 @@ data_2_ui <- function(id) {
       "See data validation",
       phosphoricons::ph("caret-down", title = "See data validation")
     ),
+    tags$button(
+      class = "btn btn-outline-primary",
+      role = "button",
+      `data-bs-toggle` = "collapse",
+      `data-bs-target` = paste0("#", ns("filter-container")),
+      "See results of filtering out taxa with large number of records",
+      phosphoricons::ph("caret-down", title = "See results of filtering out taxa with large number of records")
+    ),
     tags$div(
       class = "collapse",
       id = ns("variable-container"),
@@ -49,6 +57,11 @@ data_2_ui <- function(id) {
       class = "collapse",
       id = ns("validation-container"),
       data_validation_ui(ns("validation"))
+    ),
+    tags$div(
+      class = "collapse",
+      id = ns("filter-container"),
+      data_count_taxa_ui(ns("count_filter"))
     )
   )
 }
@@ -68,16 +81,16 @@ data_2_server <- function(id) {
       observeEvent(polygon_read_r$poly(), dataset_rv$poly <- polygon_read_r$poly())
 
 
-      output$feedback <- renderUI({
-        if (isTruthy(dataset_rv$value)) {
-          n <- nrow(dataset_rv$value)
-          shinyWidgets::alert(
-            status = "success",
-            ph("check"),
-            format(n, big.mark = ","), "rows successfully downloaded from Rainbio. Max first 1000 lines displayed below."
-          )
-        }
-      })
+      # output$feedback <- renderUI({
+      #   if (isTruthy(dataset_rv$value)) {
+      #     n <- nrow(dataset_rv$value)
+      #     shinyWidgets::alert(
+      #       status = "success",
+      #       ph("check"),
+      #       format(n, big.mark = ","), "rows successfully downloaded from Rainbio. Max first 1000 lines displayed below."
+      #     )
+      #   }
+      # })
 
       variable_r <- data_variable_server(
         id = "variable",
@@ -93,17 +106,23 @@ data_2_server <- function(id) {
           variable_r()$data
         })
       )
+      
+      data_filtered_r <- data_count_taxa_server(
+        id = "count_filter",
+        data_r = reactive({
+          req(data_validated_r())
+          data_validated_r()
+        })
+      )
 
-
-      observeEvent(data_validated_r(), {
+      observeEvent(data_filtered_r(), {
         shinyjs::enable(id = "go_next")
       })
 
-
       final_data_r <- eventReactive(input$go_next, {
-        data_validated_r()
+        data_filtered_r()
       })
-
+      
       return(list(
         data = final_data_r,
         poly = reactive(dataset_rv$poly)

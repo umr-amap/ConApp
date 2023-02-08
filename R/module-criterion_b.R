@@ -71,7 +71,7 @@ criterion_b_ui <- function(id) {
             ),
             min = 0,
             max = 30,
-            value = 10,
+            value = 5,
             round = TRUE,
             step = 1,
             width = "100%"

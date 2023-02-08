@@ -27,7 +27,7 @@ summary_report_ui <- function(id) {
 
     
     bslib::navs_pill_card(
-      title = "Report",
+      # title = "Report",
       nav(
         title = "by species",
         fluidRow(
