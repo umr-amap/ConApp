@@ -40,8 +40,8 @@ reference:
   desc: >
     Package-level documentation
   contents:
-  - conrappli-package
-  - conrappli-exports
+  - ConApp-package
+  - ConApp-exports
 
 - title: "Launch Application"
   desc: >

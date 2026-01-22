@@ -1,0 +1,12 @@
+name: conapp
+title: conapp
+username:
+account: gdauby
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8164953
+bundleId: 7756373
+url: https://gdauby.shinyapps.io/conapp/
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: dev/ConR-analysis.R|dev/ConR-workflow.R|dev/ex-draw-poly.R|dev/ex-mod-criterion_b.R|dev/ex-mod-map.R|process_table_treatened_gab/process_table.R|process_table_treatened_gab/Tree_species_Gabon_040523.csv|process_table_treatened_gab/Tree_species_Gabon_040523.xlsx

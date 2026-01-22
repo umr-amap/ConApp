@@ -57,7 +57,7 @@ remotes::install_github("umr-amap/ConApp", upgrade = FALSE)
 Launch the application:
 
 ```r
-library(conrappli)
+library(ConApp)
 
 # Launch in English (default)
 launch()

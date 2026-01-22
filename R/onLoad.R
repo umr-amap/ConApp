@@ -1,8 +1,8 @@
-#' Adds the content of assets/ to conrappli/
+#' Adds the content of assets/ to ConApp/
 #'
 #' @importFrom shiny addResourcePath
 #'
 #' @noRd
 .onLoad <- function(...) {
-  shiny::addResourcePath("conrappli", system.file("assets", package = "conrappli"))
+  shiny::addResourcePath("ConApp", system.file("assets", package = "ConApp"))
 }

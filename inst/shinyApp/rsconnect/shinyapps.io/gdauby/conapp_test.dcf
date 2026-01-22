@@ -1,0 +1,12 @@
+name: conapp_test
+title: conapp_test
+username: gdauby
+account: gdauby
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13735225
+bundleId: 9657015
+url: https://gdauby.shinyapps.io/conapp_test/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

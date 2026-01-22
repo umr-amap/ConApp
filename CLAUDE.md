@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-**conrappli** is a Shiny application for mapping plant species and computing preliminary IUCN conservation status assessments following Criterion B. It is dedicated to Central Africa and built as an R package that wraps the ConR package with a web interface.
+**ConApp** is a Shiny application for mapping plant species and computing preliminary IUCN conservation status assessments following Criterion B. It is dedicated to Central Africa and built as an R package that wraps the ConR package with a web interface.
 
 The application allows users to:
 - Import species occurrence data from multiple sources (SHP files, GBIF, Rainbio database, manual polygon drawing)
@@ -28,7 +28,7 @@ shiny::shinyApp(ui = conr_ui(), server = conr_server())
 
 Or use the exported function:
 ```r
-library(conrappli)
+library(ConApp)
 launch()  # Launches on port 5791 by default
 launch(lang = "fr")  # Launch in French
 ```
@@ -61,7 +61,7 @@ The site will be built in the `docs/` directory. The site is configured to be ho
 The package depends on a remote version of ConR:
 ```r
 # Install from GitHub
-remotes::install_github("gdauby/conrappli", upgrade = FALSE)
+remotes::install_github("gdauby/ConApp", upgrade = FALSE)
 
 # ConR dependency (required)
 remotes::install_github("gdauby/ConR")
