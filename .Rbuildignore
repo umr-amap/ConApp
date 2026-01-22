@@ -5,3 +5,9 @@
 ^dev$
 ^deploy$
 ^\.github$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^abstract_aeftat\.md$
+^CLAUDE\.md$
+^README-fr\.md$

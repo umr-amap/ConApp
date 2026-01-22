@@ -10,6 +10,8 @@ Description: Shiny application for mapping and computing several range parameter
     Dedicated to Central Africa. Provide preliminary IUCN evaluation following Criterion B.
     Based on ConR package computation.
 License: GPL-2
+URL: https://umr-amap.github.io/ConApp/, https://github.com/umr-amap/ConApp
+BugReports: https://github.com/umr-amap/ConApp/issues
 Encoding: UTF-8
 LazyData: true
 LazyDataCompression: gzip
@@ -48,5 +50,6 @@ Imports:
     tidyr,
     validate
 Remotes: gdauby/ConR
-Suggests: 
-    mapedit
+Suggests:
+    mapedit,
+    pkgdown

@@ -44,6 +44,18 @@ devtools::document()
 ?conr_ui
 ```
 
+### Building the pkgdown Website
+
+```r
+# Build the pkgdown site (without running examples)
+pkgdown::build_site(install = FALSE, examples = FALSE, new_process = FALSE)
+
+# Preview the site locally
+pkgdown::preview_site()
+```
+
+The site will be built in the `docs/` directory. The site is configured to be hosted at https://umr-amap.github.io/ConApp/
+
 ### Package Installation
 
 The package depends on a remote version of ConR:

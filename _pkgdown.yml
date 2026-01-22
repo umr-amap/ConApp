@@ -1,0 +1,135 @@
+url: https://umr-amap.github.io/ConApp/
+
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#088A08"
+    base_font: {google: "Roboto"}
+    heading_font: {google: "Roboto Slab"}
+
+home:
+  title: "ConApp - Conservation Assessment for African Plants"
+  description: >
+    A web application to help implement conservation strategies in Africa.
+    Identify threatened plant species and assess extinction risk using
+    IUCN Red List Criterion B.
+
+navbar:
+  structure:
+    left: [intro, reference, articles]
+    right: [search, github, lightswitch]
+  components:
+    home:
+      icon: fas fa-home fa-lg
+      href: index.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    articles:
+      text: Articles
+      menu:
+      - text: Version Française
+        href: articles/readme-fr.html
+    github:
+      icon: fab fa-github fa-lg
+      href: https://github.com/umr-amap/ConApp
+      aria-label: GitHub
+
+reference:
+- title: "Package Documentation"
+  desc: >
+    Package-level documentation
+  contents:
+  - conrappli-package
+  - conrappli-exports
+
+- title: "Launch Application"
+  desc: >
+    Main functions to launch the ConApp Shiny application
+  contents:
+  - launch
+  - conr_ui
+  - conr_server
+
+- title: "Data Import Modules"
+  desc: >
+    Shiny modules for importing species occurrence data from various sources
+  contents:
+  - starts_with("data_import")
+  - data_full_ui
+  - data_full_server
+  - data_source_ui
+  - data_source_server
+
+- title: "Data Processing & Validation"
+  desc: >
+    Modules for validating and filtering occurrence data
+  contents:
+  - data_validation_ui
+  - data_validation_server
+  - data_variable_ui
+  - data_variable_server
+  - data_filterout_ui
+  - data_filterout_server
+  - data_display_ui
+  - data_display_server
+  - validation_rules
+  - prepare_data_validate
+  - filtering_out_data
+  - coord_accuracy
+
+- title: "Analysis & Mapping"
+  desc: >
+    Modules for mapping species and computing conservation parameters
+  contents:
+  - mapping_ui
+  - mapping_server
+  - criterion_b_ui
+  - criterion_b_server
+
+- title: "Reporting"
+  desc: >
+    Generate conservation assessment reports
+  contents:
+  - summary_report_ui
+  - summary_report_server
+
+- title: "Database Queries"
+  desc: >
+    Functions to query external databases (GBIF, RainBio)
+  contents:
+  - starts_with("query_")
+  - retrieve_occ_data
+  - search_species_info
+
+- title: "Spatial Data"
+  desc: >
+    Functions for working with spatial data and threat layers
+  contents:
+  - extract_overlap_shp
+  - collect_shp
+  - collect_rast
+  - conn_mydb_rb
+  - conn_mydb_shp
+
+- title: "Data Quality"
+  desc: >
+    Functions for identifying and handling data quality issues
+  contents:
+  - identify_violating_records
+  - extract_violating_records
+  - exclude_violating_records
+
+- title: "Utilities & Helpers"
+  desc: >
+    Helper functions and utilities
+  contents:
+  - bs_theme_conr
+
+footer:
+  structure:
+    left: developed_by
+    right: built_with
+  components:
+    developed_by: >
+      ConApp is developed by Nicolas Texier, Tariq Stévart, and Gilles Dauby.
