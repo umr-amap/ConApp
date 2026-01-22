@@ -4,7 +4,7 @@ library(bdc)
 library(bslib)
 library(cli)
 library(ConR)
-library(conrappli)
+library(ConApp)
 library(crosstalk)
 library(datamods)
 library(DBI)
@@ -44,8 +44,8 @@ library(utils)
 library(validate)
 library(lwgeom)
 
-# remotes::install_github("dreamRs/conrappli")
-library(conrappli)
+# remotes::install_github("dreamRs/ConApp")
+library(ConApp)
 
 
 shiny::shinyApp(

@@ -94,7 +94,7 @@ home_ui <- function(id) {
               target = "_blank",
               tags$img(
                 style = "height: 200px;",
-                src = "conrappli/medias/logo_franklinia.jpg"
+                src = "ConApp/medias/logo_franklinia.jpg"
               )
             )
           )
@@ -115,7 +115,7 @@ home_ui <- function(id) {
               target="_blank",
               tags$img(
                 style = "height: 200px;",
-                src = "conrappli/medias/logo_IRD_2016_BLOC_UK_COUL.png"
+                src = "ConApp/medias/logo_IRD_2016_BLOC_UK_COUL.png"
               )
             )
           ),
@@ -127,7 +127,7 @@ home_ui <- function(id) {
               target="_blank",
               tags$img(
                 style = "height: 200px;",
-                src = "conrappli/medias/mobot-header-logo.svg"
+                src = "ConApp/medias/mobot-header-logo.svg"
               )
             )
           )
@@ -145,7 +145,7 @@ home_ui <- function(id) {
               target="_blank",
               tags$img(
                 style = "height: 140px;",
-                src = "conrappli/medias/log_ulb.png"
+                src = "ConApp/medias/log_ulb.png"
               )
             )
           ),
@@ -157,7 +157,7 @@ home_ui <- function(id) {
               target="_blank",
               tags$img(
                 style = "height: 220px;",
-                src = "conrappli/medias/Logo_USTM.png"
+                src = "ConApp/medias/Logo_USTM.png"
               )
             )
           )
@@ -175,7 +175,7 @@ home_ui <- function(id) {
               target="_blank",
               tags$img(
                 style = "height: 140px;",
-                src = "conrappli/medias/Logo_HNG.jpg"
+                src = "ConApp/medias/Logo_HNG.jpg"
               )
             )
           )

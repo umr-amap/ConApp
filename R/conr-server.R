@@ -25,9 +25,9 @@ conr_server <- function() {
 
     observeEvent(input$app_lang, {
       if (input$app_lang == "fr") {
-        datamods::set_i18n("fr", packages = c("conrappli", "datamods"))
+        datamods::set_i18n("fr", packages = c("ConApp", "datamods"))
       } else {
-        datamods::set_i18n(NULL, packages = c("conrappli", "datamods"))
+        datamods::set_i18n(NULL, packages = c("ConApp", "datamods"))
       }
       session$reload()
     }, ignoreInit = TRUE)

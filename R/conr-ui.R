@@ -22,7 +22,7 @@ conr_ui <- function(lang = c("en", "fr")) {
   lang <- match.arg(lang)
   if (lang == "en")
     lang <- NULL
-  datamods::set_i18n(lang, packages = c("conrappli", "datamods"))
+  datamods::set_i18n(lang, packages = c("ConApp", "datamods"))
   function(request) {
 
     page_navbar(
@@ -35,7 +35,7 @@ conr_ui <- function(lang = c("en", "fr")) {
         tags$b("ConApp"),
         tags$span(
           style = css(fontSize = "small"),
-          paste0("v", packageVersion("conrappli"))
+          paste0("v", packageVersion("ConApp"))
         )
       ),
       window_title = "ConApp",
@@ -83,7 +83,7 @@ conr_ui <- function(lang = c("en", "fr")) {
           ".box-dad {border-color: #9b9b9b !important; margin: 1px !important;}",
           ".sidebar { z-index: 101; }"
         ),
-        tags$script(src = "conrappli/js/script.js"),
+        tags$script(src = "ConApp/js/script.js"),
         tags$style(
           ".btn-navs { border: none; }",
           ".btn-check:hover+.btn.btn-navs { background: #D8D8D8; }",
@@ -132,7 +132,7 @@ conr_ui <- function(lang = c("en", "fr")) {
             inputId = "app_lang",
             label = NULL,
             choices = c("en", "fr"),
-            selected = getOption("conrappli.i18n"),
+            selected = getOption("ConApp.i18n"),
             width = "80px"
           ),
           style = css(display = "inline-block"),

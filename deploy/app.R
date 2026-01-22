@@ -1,6 +1,6 @@
 
 library(ConR) # remotes::install_github("gdauby/ConR")
-library(conrappli) # remotes::install_github("gdauby/conrappli", upgrade = FALSE)
+library(ConApp) # remotes::install_github("gdauby/ConApp", upgrade = FALSE)
 
 # BiocManager::install("BiocVersion")
 library(shiny)

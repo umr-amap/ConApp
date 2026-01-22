@@ -131,7 +131,7 @@ summary_report_server <- function(id,
         
         shinyWidgets::execute_safely({
           rmarkdown::render(
-            input =  system.file(package = "conrappli", "reports/species_report.Rmd"),
+            input =  system.file(package = "ConApp", "reports/species_report.Rmd"),
             output_format = rmarkdown::html_fragment(),
             params = list(
               tax = input$taxa,
@@ -171,7 +171,7 @@ summary_report_server <- function(id,
           tmp <- tempfile(tmpdir = report_dir, fileext = ".html")
           shinyWidgets::execute_safely({
             rmarkdown::render(
-              input =  system.file(package = "conrappli", "reports/species_report.Rmd"),
+              input =  system.file(package = "ConApp", "reports/species_report.Rmd"),
               output_format = rmarkdown::html_document(
                 theme = bs_theme_conr(),
                 number_sections = TRUE,
@@ -219,7 +219,7 @@ summary_report_server <- function(id,
 
         shinyWidgets::execute_safely({
           rmarkdown::render(
-            input =  system.file(package = "conrappli", "reports/all_tax_report.Rmd"),
+            input =  system.file(package = "ConApp", "reports/all_tax_report.Rmd"),
             output_format = rmarkdown::html_fragment(),
             params = list(
               data = data_r(),
@@ -250,7 +250,7 @@ summary_report_server <- function(id,
           tmp <- tempfile(tmpdir = report_dir, fileext = ".html")
           shinyWidgets::execute_safely({
             rmarkdown::render(
-              input =  system.file(package = "conrappli", "reports/all_tax_report.Rmd"),
+              input =  system.file(package = "ConApp", "reports/all_tax_report.Rmd"),
               output_format = rmarkdown::html_document(
                 theme = bs_theme_conr(),
                 number_sections = TRUE,

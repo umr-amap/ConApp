@@ -209,7 +209,7 @@ data_country_server <- function(id) {
 
           shinyWidgets::execute_safely({
             rmarkdown::render(
-              input =  system.file(package = "conrappli", "reports/country_threat_report.Rmd"),
+              input =  system.file(package = "ConApp", "reports/country_threat_report.Rmd"),
               output_format = rmarkdown::html_document(
                 theme = bs_theme_conr(),
                 number_sections = TRUE,
