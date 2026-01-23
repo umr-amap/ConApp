@@ -46,6 +46,14 @@ Cette application est conçue pour planifier le développement éventuel d'un si
 
 **Mots-clés :** conservation, aménagement du territoire, risque d'extinction, Liste Rouge, évaluations automatiques
 
+## Accès en ligne
+
+Vous pouvez accéder à l'application directement en ligne sans installation à l'adresse :
+
+**https://gdauby.shinyapps.io/conapp/**
+
+⚠️ **Note :** La version en ligne est hébergée sur un serveur avec une RAM limitée. Les requêtes ou calculs volumineux peuvent provoquer un plantage de l'application. Pour une utilisation intensive ou de grands jeux de données, nous recommandons d'installer et d'exécuter l'application localement dans R (voir les instructions d'installation ci-dessous).
+
 ## Installation
 
 ConApp est un package R qui fournit une application web Shiny. Installez-le directement depuis GitHub :

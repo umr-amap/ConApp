@@ -37,6 +37,14 @@ This application is designed to plan the possible development of a site taking i
 
 **Keywords:** conservation, land-use planning, extinction risk, Red List, automatic assessments
 
+## Online Access
+
+You can access the application directly online without installation at:
+
+**https://gdauby.shinyapps.io/conapp/**
+
+⚠️ **Note:** The online version is hosted on a server with limited RAM. Large queries or computations may cause the application to crash. For intensive use or large datasets, we recommend installing and running the application locally in R (see installation instructions below).
+
 ## Installation
 
 ConApp is an R package that provides a Shiny web application. Install it directly from GitHub:
