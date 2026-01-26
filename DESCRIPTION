@@ -33,6 +33,7 @@ Imports:
     kableExtra,
     leaflet,
     leafpm,
+    lwgeom,
     measurements,
     phosphoricons,
     reactable (>= 0.4.4),
